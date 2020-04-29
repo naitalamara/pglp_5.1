@@ -10,7 +10,7 @@ import org.junit.Test;
 
 public class DAOTest {
 	private Personnel a ,b ,c;
-	Groupe_Personnel grp; 
+	Groupe_Personnel grp ,grp2; 
 	@Before
 	public void init() {
 	  a=new Personnel
@@ -27,7 +27,10 @@ public class DAOTest {
 				.numerotelph(new NumeroTelephone("fixe","0550"))
 				.build();
 	grp = new Groupe_Personnel();
+	grp2 = new Groupe_Personnel(); // groupe vide
+	
 	grp.addpersonnel(a);
+	grp.addpersonnel(c);
 
 			
 	}
@@ -69,11 +72,17 @@ public class DAOTest {
 		assertEquals(b.getPrenom(), c.getPrenom());
 		assertEquals(b.getFonction(), c.getFonction());
 		assertEquals(b.getDatenaissance(),c.getDatenaissance());
-		
-		
-		
-		
+		}
+	
+	@Test
 
+	public void test_groupe() {
+		DAO<Groupe_Personnel>perss =DAOFactory.getGroupeDAO();
+		grp2=perss.create(grp);
+		 assertEquals(2, grp2.retournergroupe().size());
+		
+		 
+		 
 
 	}
 }
