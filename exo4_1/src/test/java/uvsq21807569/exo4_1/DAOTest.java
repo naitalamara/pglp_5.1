@@ -53,9 +53,27 @@ public class DAOTest {
 		assertEquals(b.getFonction(), c.getFonction());
 		assertEquals(b.getDatenaissance(),c.getDatenaissance());
 		assertEquals(b.getNumerotelephone(),c.getNumerotelephone());
-		
-		
-		
-	}
+		}
 
+	
+	
+	
+	@Test
+	public void test2_avec_read() {
+		DAO<Personnel> pers =DAOFactory.getPersonneDAO();
+		pers.delete(a);
+		b=pers.create(a);
+		c=pers.read("chek");
+		
+		assertEquals(b.getNom(), c.getNom());
+		assertEquals(b.getPrenom(), c.getPrenom());
+		assertEquals(b.getFonction(), c.getFonction());
+		assertEquals(b.getDatenaissance(),c.getDatenaissance());
+		
+		
+		
+		
+
+
+	}
 }
