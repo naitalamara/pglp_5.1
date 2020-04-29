@@ -24,7 +24,7 @@ public abstract class OperationSerialiser  <T extends Serializable> {
 
 	public void suprimerfichier(String nom) {
 		File file = new File(nom); 
-		if(file.delete()) System.out.println("Objet supprimé!"); 
+		if(file.delete()) System.out.println("suppresion réalisée"); 
 		else System.out.println("Suppression impossible");
 	}
 
@@ -56,18 +56,21 @@ public abstract class OperationSerialiser  <T extends Serializable> {
 				}
 				else {
 					ecrirefichier(obj, nom );
+					System.out.println("objet creer");
 					return obj;
 				}
 			}
 	public T misejourfichier(T obj, String nom) {
 		if (!exister(nom)) {
-			System.out.println("impossible de modifier fichier car il n'existe pas ");
-			return null;
-		}else {
+			
+			creerfichier(obj, nom);
+			 
+		}
 			suprimerfichier(nom);
 			ecrirefichier(obj, nom);
+			System.out.println("object mis a jour avec succée");
 			return obj;
-		}
+		
 	}
 				
 	}
