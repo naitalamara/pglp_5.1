@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Personnel implements Personneltype {
+public class Personnel extends Personneltype {
 
 	// obligatoire 
 	private final String nom;

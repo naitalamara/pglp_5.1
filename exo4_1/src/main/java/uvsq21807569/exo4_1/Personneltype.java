@@ -1,11 +1,13 @@
 package uvsq21807569.exo4_1;
 
-public interface Personneltype {
+import java.io.Serializable;
+
+public abstract class Personneltype implements Serializable {
 
 
 
-	public void affichage();
+	public abstract void affichage();
 
-	public boolean estgroupe();
+	public abstract boolean estgroupe();
 
 }

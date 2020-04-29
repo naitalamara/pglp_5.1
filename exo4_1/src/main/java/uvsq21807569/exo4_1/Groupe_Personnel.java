@@ -4,7 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class Groupe_Personnel implements Personneltype{
+public class Groupe_Personnel extends Personneltype{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private List<Personneltype> listpers ;
 
 		public Groupe_Personnel(){
