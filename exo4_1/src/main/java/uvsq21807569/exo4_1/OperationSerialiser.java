@@ -47,6 +47,27 @@ public abstract class OperationSerialiser  <T extends Serializable> {
 		}
 	}
 	
-	
-	
+	public T creerfichier(T obj, String nom) {
+
+		if (exister(nom)) {
+		System.out.println("impossible de creer object");
+					System.out.println("objet existe deja ");
+					return null;
+				}
+				else {
+					ecrirefichier(obj, nom );
+					return obj;
+				}
+			}
+	public T misejourfichier(T obj, String nom) {
+		if (!exister(nom)) {
+			System.out.println("impossible de modifier fichier car il n'existe pas ");
+			return null;
+		}else {
+			suprimerfichier(nom);
+			ecrirefichier(obj, nom);
+			return obj;
+		}
+	}
+				
 	}
