@@ -10,11 +10,11 @@ public class Groupe_Personnel extends Personneltype{
 	 */
 	private static final long serialVersionUID = 1L;
 	private List<Personneltype> listpers ;
-	private int id ;
+	private Integer id ;
 
 		public Groupe_Personnel(){
 			listpers=new ArrayList <Personneltype>();
-			id =(int)( Math.random()*( 900 - 1 + 1 ) ) + 1;
+			id=(int)( Math.random()*( 900 - 1 + 1 ) ) + 1;
 		}
 
 		
@@ -58,8 +58,8 @@ public class Groupe_Personnel extends Personneltype{
 	
 	
 
-	public int getId() {
-		return id;
+	public String getId() {
+		return id.toString();
 	}
 
 

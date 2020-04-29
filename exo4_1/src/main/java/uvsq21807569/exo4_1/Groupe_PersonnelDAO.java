@@ -7,24 +7,24 @@ public class Groupe_PersonnelDAO <T extends Serializable>	extends  OperationSeri
 	@Override
 	public Groupe_Personnel create(Groupe_Personnel obj) {
 		// TODO Auto-generated method stub
-		return null;
+		return creerfichier(obj, obj.getId());
 	}
 
 	@Override
 	public Groupe_Personnel read(String id) {
 		// TODO Auto-generated method stub
-		return null;
+		return lirefichier(id);
 	}
 
 	@Override
 	public Groupe_Personnel update(Groupe_Personnel obj) {
 		// TODO Auto-generated method stub
-		return null;
+		return misejourfichier(obj, obj.getId());
 	}
 
 	@Override
 	public void delete(Groupe_Personnel obj) {
-		// TODO Auto-generated method stub
+		suprimerfichier(obj.getId());
 		
 	}
 
